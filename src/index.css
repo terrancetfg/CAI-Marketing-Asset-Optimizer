@@ -1,0 +1,135 @@
+@import "tailwindcss";
+
+/*
+  Cox Automotive 2025 Color Spectrum
+  Source: 25-CAI-00303_2025-Brand-Guidelines-Refresh_v1.3.pdf, page 44
+*/
+@theme {
+  --font-sans: "Gotham", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Gotham", ui-sans-serif, system-ui, sans-serif;
+
+  /* CAI Neutrals */
+  --color-cai-white: #FFFFFF;
+  --color-cai-gray-200: #EEEEEF;
+  --color-cai-gray-300: #CCCCCE;
+  --color-cai-gray-400: #A7A9AC;
+  --color-cai-gray-500: #808285;  /* CAI Logo Gray */
+  --color-cai-gray-600: #55575C;
+  --color-cai-gray-700: #3A3E43;
+  --color-cai-black: #000000;
+
+  /* Trust Blue (Primary brand navy) */
+  --color-trust-blue-100: #739DE5;
+  --color-trust-blue-200: #3968B2;
+  --color-trust-blue-300: #1D3E74;
+  --color-trust-blue-400: #18325E;
+  --color-trust-blue-500: #091F40;
+
+  /* Joyride Blue */
+  --color-joyride-blue-100: #7CB2F7;
+  --color-joyride-blue-200: #387CCF;
+  --color-joyride-blue-300: #034AA6;
+  --color-joyride-blue-400: #023980;
+  --color-joyride-blue-500: #01224C;
+
+  /* Power Blue (Interactive / links) */
+  --color-power-blue-50: #E7F2FC;
+  --color-power-blue-100: #87CDFC;
+  --color-power-blue-200: #45AAEE;
+  --color-power-blue-300: #0C80DF;
+  --color-power-blue-400: #00528A;  /* CAI Logo Blue */
+  --color-power-blue-500: #003468;
+
+  /* Energy Aqua (Primary accent / highlight) */
+  --color-energy-aqua-100: #A5EBFA;
+  --color-energy-aqua-200: #67DBF5;
+  --color-energy-aqua-300: #00BCDD;
+  --color-energy-aqua-400: #068CA6;
+  --color-energy-aqua-500: #015766;
+
+  /* Fresh Green (Positive / success) */
+  --color-fresh-green-50: #E5F6F3;
+  --color-fresh-green-100: #95F5E4;
+  --color-fresh-green-200: #00DCB1;
+  --color-fresh-green-300: #00A983;
+  --color-fresh-green-400: #008F6E;
+  --color-fresh-green-500: #00523D;
+
+  /* Hello Yellow (Selection / highlight) */
+  --color-hello-yellow-50: #FFF9E7;
+  --color-hello-yellow-100: #FFE392;
+  --color-hello-yellow-200: #FFD14A;
+  --color-hello-yellow-300: #FFC20E;
+  --color-hello-yellow-400: #DC9200;
+  --color-hello-yellow-500: #B27600;
+
+  /* Impact Orange (Warning / negative delta) */
+  --color-impact-orange-100: #FFBF7A;
+  --color-impact-orange-200: #FFA245;
+  --color-impact-orange-300: #FF8210;
+  --color-impact-orange-400: #ED6500;
+  --color-impact-orange-500: #BF5000;
+
+  /* Fire Red (Error / critical) */
+  --color-fire-red-100: #FF7373;
+  --color-fire-red-200: #F74848;
+  --color-fire-red-300: #D80909;
+  --color-fire-red-400: #B20707;
+  --color-fire-red-500: #6B0202;
+
+  /*
+    Legacy semantic aliases — point at CAI values so existing classes
+    (border-navy-100, text-cai-blue, etc.) keep working without churn.
+  */
+  --color-navy-50: #EEEEEF;       /* cai-gray-200 */
+  --color-navy-100: #CCCCCE;      /* cai-gray-300 */
+  --color-navy-200: #A7A9AC;      /* cai-gray-400 */
+  --color-navy-500: #808285;      /* cai-gray-500 */
+  --color-navy-700: #18325E;      /* trust-blue-400 */
+  --color-navy-800: #091F40;      /* trust-blue-500 */
+  --color-navy-900: #091F40;      /* trust-blue-500 (deepest defined) */
+
+  --color-cai-blue: #0C80DF;      /* power-blue-300 */
+  --color-cai-blue-dark: #00528A; /* power-blue-400 */
+  --color-cai-cyan: #00BCDD;      /* energy-aqua-300 */
+  --color-cai-yellow: #FFC20E;    /* hello-yellow-300 */
+  --color-cai-green: #00A983;     /* fresh-green-300 */
+  --color-cai-orange: #FF8210;    /* impact-orange-300 */
+
+  --color-pill-channel-bg: #87CDFC; /* power-blue-100 */
+  --color-pill-channel-fg: #00528A; /* power-blue-400 */
+  --color-pill-type-bg: #95F5E4;    /* fresh-green-100 */
+  --color-pill-type-fg: #008F6E;    /* fresh-green-400 */
+  --color-pill-format-bg: #FFBF7A;  /* impact-orange-100 */
+  --color-pill-format-fg: #ED6500;  /* impact-orange-400 */
+  --color-pill-search-bg: #A5EBFA;  /* energy-aqua-100 */
+  --color-pill-search-fg: #015766;  /* energy-aqua-500 */
+  --color-pill-overflow-bg: #EEEEEF; /* cai-gray-200 */
+  --color-pill-overflow-fg: #3A3E43; /* cai-gray-700 */
+
+  --color-status-under-bg: #FFBF7A;  /* impact-orange-100 */
+  --color-status-under-fg: #ED6500;  /* impact-orange-400 */
+  --color-status-on-bg: #87CDFC;     /* power-blue-100 */
+  --color-status-on-fg: #00528A;     /* power-blue-400 */
+  --color-status-over-bg: #95F5E4;   /* fresh-green-100 */
+  --color-status-over-fg: #008F6E;   /* fresh-green-400 */
+
+  --radius-xl: 0.75rem;
+  --radius-2xl: 1rem;
+
+  /* Custom breakpoint for external desktop monitors */
+  --breakpoint-3xl: 1920px;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #FFFFFF;
+  color: var(--color-trust-blue-400);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
