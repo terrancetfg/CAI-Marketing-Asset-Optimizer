@@ -5,6 +5,7 @@ import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
+  base: '/CAI-Marketing-Asset-Optimizer/',
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
